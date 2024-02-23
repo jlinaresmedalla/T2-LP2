@@ -1,0 +1,21 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.model.Genero;
+import com.example.demo.repository.GeneroRepository;
+import com.example.demo.repository.UserRepository;
+
+@Service
+public class GeneroService {
+	
+	@Autowired
+	private GeneroRepository generoRepository;
+
+	public List<Genero> getAllGeneros() {
+		return generoRepository.findAll();
+	}
+}
